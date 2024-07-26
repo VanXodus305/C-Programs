@@ -4,7 +4,6 @@
 // 3) Replace the array using another array
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int n;
 
