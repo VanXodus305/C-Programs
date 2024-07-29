@@ -4,7 +4,7 @@
 
 void main()
 {
-  int m, n;
+  int m, n, count = 0;
   printf("Enter the size of the matrix: ");
   scanf("%d %d", &m, &n);
   int matrix[m][n];
@@ -14,13 +14,6 @@ void main()
     for (int j = 0; j < n; j++)
     {
       scanf("%d", &matrix[i][j]);
-    }
-  }
-  int count = 0;
-  for (int i = 0; i < m; i++)
-  {
-    for (int j = 0; j < n; j++)
-    {
       if (matrix[i][j] != 0)
       {
         count++;
