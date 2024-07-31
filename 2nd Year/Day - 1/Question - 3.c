@@ -34,7 +34,7 @@ void main()
   {
     printf("Name: %s\n", employees[i].name);
     printf("Designation: %s\n", employees[i].designation);
-    printf("Basic Salary: %f\n", employees[i].basic_salary);
+    printf("Basic Salary: %0.2f\n", employees[i].basic_salary);
     printf("HRA %: %0.2f\n", employees[i].hra);
     printf("DA %: %0.2f\n", employees[i].da);
     printf("Gross Salary: %0.2f\n", employees[i].basic_salary + (employees[i].hra / 100) * employees[i].basic_salary + (employees[i].da / 100) * employees[i].basic_salary);

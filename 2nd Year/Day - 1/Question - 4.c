@@ -22,13 +22,13 @@ void product(struct Complex *c1, struct Complex *c2)
 
 void main()
 {
-  struct Complex c1, c2, c3;
+  struct Complex c1, c2;
   int choice;
   printf("Enter the real and imaginary part of the first complex number: ");
   scanf("%f %f", &c1.real, &c1.imaginary);
   printf("Enter the real and imaginary part of the second complex number: ");
   scanf("%f %f", &c2.real, &c2.imaginary);
-  printf("Enter the operation you want to perform:\n1. Addition\n2. Multiplication\n");
+  printf("Enter the operation you want to perform:\n1. Addition 2. Multiplication\n");
   scanf("%d", &choice);
   switch (choice)
   {

@@ -20,9 +20,7 @@ int sumOfPrime(int *arr)
       }
     }
     if (flag == 0 && arr[i] != 1)
-    {
       sum += arr[i];
-    }
   }
   return sum;
 }
