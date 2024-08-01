@@ -5,3 +5,7 @@
 > - Reverse the array
 > - Find the duplicate element and it's frequency
 > - Replace the array using another array
+
+> ### Question - 2
+>
+> **Write a program to store elements in a 2-D Array using pointers and then also display the elements**
