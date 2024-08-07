@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // Write a program to create a structure to store the information of n number of Employees. Employee’s information includes data members: Emp-id, Name, Designation, basic_salary, hra%, da%. Display the information of employees with gross salary. Use array of structure.
 
 #include <stdio.h>
