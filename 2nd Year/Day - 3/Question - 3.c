@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // WAP to represent the polynomial of single variable using 1-D array and perform the addition of two polynomial equations.
 
 #include <stdio.h>

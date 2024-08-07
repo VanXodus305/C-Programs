@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // Write a program to store elements in a 2-D Array using pointers and then also display the elements.
 
 #include <stdio.h>

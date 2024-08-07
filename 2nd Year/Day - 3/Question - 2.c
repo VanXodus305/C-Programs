@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // WAP to perform addition of two given sparse matrix in 3–tuple format.
 
 #include <stdio.h>
@@ -12,13 +13,17 @@ void main()
     matrix[k][0] = (int *)malloc(3 * sizeof(int));
     printf("Enter sparse matrix - %d in 3-tuple format: \n", k + 1);
     for (int i = 0; i < 3; i++)
+    {
       scanf("%d", matrix[k][0] + i);
+    }
     matrix[k] = (int **)realloc(matrix[k], (matrix[k][0][2] + 1) * sizeof(int *));
     for (int i = 1; i <= matrix[k][0][2]; i++)
     {
       matrix[k][i] = (int *)malloc(3 * sizeof(int));
       for (int j = 0; j < 3; j++)
+      {
         scanf("%d", matrix[k][i] + j);
+      }
     }
   }
 
@@ -60,7 +65,9 @@ void main()
   for (int i = 0; i <= result[0][2]; i++)
   {
     for (int j = 0; j < 3; j++)
+    {
       printf("%d ", result[i][j]);
+    }
     printf("\n");
   }
 }

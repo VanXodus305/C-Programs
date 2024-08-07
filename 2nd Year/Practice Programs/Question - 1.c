@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // WAP to create an array of size N and perform the following operations:
 // 1) Reverse the array
 // 2) Find the duplicate elements and their frequency

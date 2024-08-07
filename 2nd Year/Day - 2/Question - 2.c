@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // Write a program to perform the following operations on a given square matrix using functions:
 // i. Find the no.of nonzero elements
 // ii. Display upper triangular matrix
@@ -18,7 +19,7 @@ void nonZeroElements(int *n, int matrix[*n][*n])
       }
     }
   }
-  printf("Non zero elements in the matrix: %d\n", count);
+  printf("Non-zero elements in the matrix: %d\n", count);
 }
 
 void upperTriangularMatrix(int *n, int matrix[*n][*n])

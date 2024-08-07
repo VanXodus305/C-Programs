@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // WAP to create a 1-D array of n elements and perform the following menu based operations using function.
 // a. insert a given element at specific position.
 // b. delete an element from a specific position of the array.
@@ -10,10 +11,9 @@
 void insert(int *arr, int *n)
 {
   printf("Enter the element to be inserted: ");
-  int element;
+  int element, position;
   scanf("%d", &element);
   printf("Enter the position: ");
-  int position;
   scanf("%d", &position);
   if (position < 0 || position >= *n)
   {
@@ -67,6 +67,7 @@ void search(int *arr, int *n)
 
 void traverse(int *arr, int *n)
 {
+  printf("Array Elements: ");
   for (int i = 0; i < *n; i++)
   {
     printf("%d ", arr[i]);
@@ -85,28 +86,31 @@ void main()
   {
     scanf("%d", &arr[i]);
   }
-  int choice;
-  printf("Enter your choice: ");
-  printf("\n1. Insert\n2. Delete\n3. Search\n4. Traverse\n5. Exit\n");
-  scanf("%d", &choice);
-  switch (choice)
+  int choice = 0;
+  while (choice >= 0 && choice < 5)
   {
-  case 1:
-    insert(arr, &n);
-    break;
-  case 2:
-    delete (arr, &n);
-    break;
-  case 3:
-    search(arr, &n);
-    break;
-  case 4:
-    traverse(arr, &n);
-    break;
-  case 5:
-    exit(0);
-    break;
-  default:
-    printf("Invalid choice\n");
+    printf("Enter your choice: ");
+    printf("\n1. Insert\n2. Delete\n3. Search\n4. Traverse\n5. Exit\n");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+      insert(arr, &n);
+      break;
+    case 2:
+      delete (arr, &n);
+      break;
+    case 3:
+      search(arr, &n);
+      break;
+    case 4:
+      traverse(arr, &n);
+      break;
+    case 5:
+      exit(0);
+      break;
+    default:
+      printf("Invalid choice.\n");
+    }
   }
 }

@@ -1,3 +1,4 @@
+// ©️ Soumyadeep Kundu [2305820]
 // WAP to perform transpose of a given sparse matrix in 3-tuple format.
 
 #include <stdio.h>
