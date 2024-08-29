@@ -156,7 +156,7 @@ void main()
     scanf("%d", &value);
     insert(value, i);
   }
-  printf("1. Insert a node at position\n2. Delete a node from specific position\n3. Count\n4. Traversal\n5. Exit\n");
+  printf("1. Insert a node at position\n2. Delete a node from specific position\n3. Count\n4. Traversal\n5. Search\n6. Sort\n7. Reverse\n8. Exit\n");
   while (choice >= 1 && choice <= 8)
   {
     printf("Enter Choice:\n");

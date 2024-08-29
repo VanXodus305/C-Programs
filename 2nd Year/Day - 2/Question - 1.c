@@ -15,7 +15,7 @@ void insert(int *arr, int *n)
   scanf("%d", &element);
   printf("Enter the position: ");
   scanf("%d", &position);
-  if (position < 0 || position >= *n)
+  if (position < 0 || position > *n)
   {
     printf("Invalid position\n");
     return;

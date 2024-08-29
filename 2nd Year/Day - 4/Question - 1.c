@@ -66,16 +66,11 @@ void delete(int pos)
   for (int i = 1; i < (pos - 1); i++)
   {
     tail = tail->next;
-    if (tail == NULL)
+    if (tail == NULL || tail->next == NULL)
     {
       printf("Invalid Position.\n");
       return;
     }
-  }
-  if (tail->next == NULL)
-  {
-    printf("Invalid Position.\n");
-    return;
   }
   node = tail->next;
   tail->next = node->next;
