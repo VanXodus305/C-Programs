@@ -19,7 +19,7 @@ int insert(int value, int pos)
 {
   temp = (struct Node *)malloc(sizeof(struct Node));
   temp->data = value;
-  temp->next = NULL;
+  temp->next = temp->prev = NULL;
   if (pos <= 0)
   {
     printf("Invalid Position.\n");
@@ -28,6 +28,9 @@ int insert(int value, int pos)
   else if (pos == 1)
   {
     temp->next = head;
+    temp->prev = NULL;
+    if (head != NULL)
+      head->prev = temp;
     head = temp;
     return 1;
   }
@@ -42,6 +45,9 @@ int insert(int value, int pos)
     }
   }
   temp->next = tail->next;
+  if (tail->next != NULL)
+    tail->next->prev = temp;
+  temp->prev = tail;
   tail->next = temp;
   return 1;
 }
@@ -59,6 +65,7 @@ int delete(int pos)
   {
     node = head;
     head = head->next;
+    head->prev = NULL;
     free(node);
     return 1;
   }
@@ -73,6 +80,7 @@ int delete(int pos)
   }
   node = tail->next;
   tail->next = node->next;
+  node->next->prev = tail;
   free(node);
   return 1;
 }
