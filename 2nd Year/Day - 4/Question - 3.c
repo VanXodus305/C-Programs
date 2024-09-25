@@ -6,17 +6,17 @@
 
 struct Node
 {
-  int data;
+  int coeff, degree;
   struct Node *next;
 };
 
 struct Node *head[2] = {NULL, NULL};
-int degree;
 
-void insert(int value, int index)
+void insert(int value, int degree, int index)
 {
   struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
-  temp->data = value;
+  temp->coeff = value;
+  temp->degree = degree;
   temp->next = head[index];
   head[index] = temp;
 }
@@ -35,9 +35,10 @@ void sum(struct Node *node1, struct Node *node2)
   {
     node1 == NULL ? sum(NULL, node2->next) : sum(node1->next, NULL);
   }
-  int sum = node1 != NULL ? node1->data : 0;
-  sum += node2 != NULL ? node2->data : 0;
-  node1 == head[0] && node2 == head[1] ? printf("%dx^%d", sum, degree--) : printf("%dx^%d + ", sum, degree--);
+  int sum = node1 != NULL ? node1->coeff : 0;
+  sum += node2 != NULL ? node2->coeff : 0;
+  int degree = node1 != NULL ? node1->degree : node2->degree;
+  node1 == head[0] && node2 == head[1] ? printf("%dx^%d", sum, degree) : printf("%dx^%d + ", sum, degree);
 }
 
 void main()
@@ -53,10 +54,9 @@ void main()
       int value;
       printf("Enter the coefficient of degree - %d: ", j);
       scanf("%d", &value);
-      insert(value, i);
+      insert(value, j, i);
     }
   }
-  degree = n[0] > n[1] ? n[0] : n[1];
   printf("Sum: ");
   sum(head[0], head[1]);
 }

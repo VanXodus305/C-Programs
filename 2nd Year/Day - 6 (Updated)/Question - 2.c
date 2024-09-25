@@ -1,35 +1,50 @@
 // ©️ Soumyadeep Kundu [2305820]
 // Write a program to reverse a stack using recursion, without using any loop or any additional memory.
 
-#include <stdlib.h>
 #include <stdio.h>
 
-struct Node
-{
-  int data;
-  struct Node *next;
-};
+int top = -1;
+int stack[100];
+int bottom = 100;
 
-struct Node *top = NULL;
-struct Node *temp;
-
-void push(char value)
+void push(int value)
 {
-  temp = (struct Node *)malloc(sizeof(struct Node));
-  temp->data = value;
-  temp->next = top;
-  top = temp;
+  if (top == 100 - 1)
+  {
+    printf("Stack is Full.\n");
+    return;
+  }
+  stack[++top] = value;
 }
 
-void reverse(struct Node *top)
+void pushToBottom()
 {
-  if (top == NULL)
+  if (top == -1)
   {
     return;
   }
-  printf("%d ", top->data);
-  reverse(top->next);
-  free(top);
+  int value = stack[top--];
+  pushToBottom();
+  stack[--bottom] = value;
+}
+
+void popToTop()
+{
+  if (bottom == 100)
+  {
+    return;
+  }
+  push(stack[bottom++]);
+  popToTop();
+}
+
+void print()
+{
+  for (int i = 0; i <= top; i++)
+  {
+    printf("%d ", stack[i]);
+  }
+  printf("\n");
 }
 
 void main()
@@ -43,6 +58,10 @@ void main()
     scanf("%d", &value);
     push(value);
   }
+  printf("Original Stack: ");
+  print();
+  pushToBottom();
+  popToTop();
   printf("Reversed Stack: ");
-  reverse(top);
+  print();
 }
