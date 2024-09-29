@@ -123,7 +123,7 @@ void main()
       isFull(size);
       break;
     case 5:
-      printf("Queue: ");
+      printf("Circular Queue: ");
       print(queue, size);
       break;
     case 6:
