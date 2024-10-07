@@ -28,7 +28,7 @@ void print(int *arr, int size)
   printf("\n");
 }
 
-int main()
+void main()
 {
   int size;
   printf("Enter the size of the array: ");
