@@ -5,7 +5,7 @@
 
 #define size 5
 int front = -1, rear = -1;
-int queue[100];
+int queue[size];
 
 int isEmpty()
 {
@@ -91,7 +91,7 @@ int deleteFromLeft()
 
 int deleteFromRight()
 {
-  if (front == -1 && rear == -1)
+  if (isEmpty() == 1)
   {
     printf("Queue is Empty.\n");
     return -1;
