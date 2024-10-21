@@ -31,10 +31,10 @@ void print(int *arr, int size)
 void main()
 {
   int size;
-  printf("Enter the size of the array: ");
+  printf("Enter the number of elements: ");
   scanf("%d", &size);
   int arr[size];
-  printf("Enter the elements of the array: ");
+  printf("Enter the elements: ");
   for (int i = 0; i < size; i++)
   {
     scanf("%d", &arr[i]);
