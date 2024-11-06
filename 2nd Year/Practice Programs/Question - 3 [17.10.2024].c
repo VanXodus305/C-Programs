@@ -9,9 +9,9 @@ struct Node
   struct Node *next;
 };
 
-struct node *head = NULL;
+struct Node *head = NULL;
 
-struct node *findIntersection(struct Node *head1, struct Node *head2)
+struct Node *findIntersection(struct Node *head1, struct Node *head2)
 {
   struct Node *temp1 = head1;
   struct Node *temp2 = head2;
