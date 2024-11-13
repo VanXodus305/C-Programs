@@ -23,8 +23,7 @@ void enqueue(int element, int priority)
     head = newNode;
     return;
   }
-  while (temp->next != NULL && temp->next->priority < priority
-  )
+  while (temp->next != NULL && temp->next->priority < priority)
   {
     temp = temp->next;
   }
