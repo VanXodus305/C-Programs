@@ -2,8 +2,8 @@
 // Write a menu driven program to implement Deques (both Input-restricted and Output-restricted) and perform operations such as Enqueue, Dequeue, Peek, IsEmpty, IsFull using static array.
 
 #include <stdio.h>
-
 #define size 5
+
 int front = -1, rear = -1;
 int queue[size];
 
